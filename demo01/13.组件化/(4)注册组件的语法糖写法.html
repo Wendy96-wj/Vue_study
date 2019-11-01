@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件化的语法糖写法</title>
+</head>
+
+<body>
+    
+
+    <div id="app">
+        <!-- 3.使用组件 -->
+        <mycpn1></mycpn1>
+        <mycpn2></mycpn2>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        // 1.全局组建注册的语法糖
+        // 1.创建组件构造器对象
+        // const cpnContructor = Vue.extend({
+        //     template: `
+        //     <div>
+        //         <h2>我是标题</h2>
+        //         <p>我是内容：哈哈哈哈哈</p>
+        //         <p>我是内容：啦啦啦啦啦啦啦啦啦</p>
+        //     </div>`
+        // })
+
+        // 2.注册组件
+        Vue.component("mycpn1",{
+            template: `
+            <div>
+                <h2>我是标题(我是全局部组件)</h2>
+                <p>我是内容：哈哈哈哈哈</p>
+                <p>我是内容：啦啦啦啦啦啦啦啦啦</p>
+            </div>`
+        })
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊',
+            },
+            components:{
+                "mycpn2":{
+                template: `
+                <div>
+                    <h2>我是标题(我是局部组件)</h2>
+                    <p>我是内容：呼呼呼呼</p>
+                    <p>我是内容：嘟嘟嘟嘟的嘟嘟</p>
+                </div>`
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

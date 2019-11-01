@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>v-bind&&v-for</title>
+        <style>
+            .active {
+                color: #ff6600;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="app">
+            <ul>
+                <li v-for="(item,index) in movies" @click="bindMovie(index)" :class="{active:currentIndex===index}" >{{index}}. {{item}}</li>
+            </ul>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    message:'你好啊',
+                    movies:["少年的你","哪吒","中国机长","我和我的祖国"],
+                    currentIndex:0,
+                    
+                },
+                methods:{
+                    bindMovie: function(index){
+                        this.currentIndex = index;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

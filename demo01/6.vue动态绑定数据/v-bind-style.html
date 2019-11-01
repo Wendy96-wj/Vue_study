@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>v-bind绑定动态style</title>
+        <style>
+            .active {
+                color: #ff6600;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="app">
+            <!-- <h2 :style="{key(属性名):value(属性值)}">{{message}}</h2> -->
+            <!-- 50px 必须加上单引号，否则被当作一个变量去解析 -->
+            <h2 :style="{fontSize:'50px'}">{{message}}</h2>
+            <h2 :style="{fontSize:fontSize}">{{message}}</h2>
+            <h2 :style="{fontSize:textSize + 'px',color:textColor}" >{{message}}</h2>
+            <h2 :style="getStyle()" >{{message}}</h2>
+
+
+            <!--以下 style 数组语法 -->
+            <h2 :style="['baseStyle','baseSize']">{{message}}</h2>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    message:'你好啊',   
+                    fontSize:'80px',
+                    textSize:100,
+                    textColor:'#ff6600',
+                    baseStyle:{textColor:'#ff6600'},
+                    baseSize:{fontSize:'50px'}
+                },
+                methods:{
+                    getStyle: function () {
+                        return {fontSize:this.textSize + 'px',color:this.textColor};
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

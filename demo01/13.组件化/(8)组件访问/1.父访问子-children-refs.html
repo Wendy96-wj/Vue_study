@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>父组件与子组件的通信</title>
+</head>
+
+<body>
+
+    <!-- 父组件模板 -->
+    <div id="app">
+        <div>
+            <cpn ref='cccc'></cpn>
+            <cpn ref='bbbb'></cpn>
+            <cpn ref="aaaa"></cpn>
+            <button @click="btnClick">按钮</button>
+        </div>
+    </div>
+
+    <!-- 子组件模板 -->
+    <template id="cpnC1">
+        <div>我是子组件</div>
+    </template>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+        // 1.子组件
+        const cpn = {
+            template: '#cpnC1',
+            data(){
+                return {
+                    name:'我是子组件的cpn'
+                }
+            },
+            methods: {
+                showMessage() {
+                    console.log('showMessage');
+                }
+            }
+
+        }
+
+        // 2.父组件
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '个人信息',
+            },
+            components: {
+                cpn
+            },
+            methods: {
+                btnClick() {
+                    console.log(this.$children);
+                    // 1.$children (不常用)
+                    // this.$children[0].showMessage();
+
+                    // let nameArray = [];
+                    // for (let i of this.$children){
+                    //     console.log(i.name);
+                    //     nameArray.push(i.name)
+                    //     i.showMessage();
+                    // }
+                    // console.log(nameArray);
+
+                    // 2.refs （常用） =>对象类型，默认是一个空的对象 ref='bbbb'
+                    console.log(this.$refs.aaaa);
+                    console.log(this.$refs.bbbb);
+                    console.log(this.$refs.cccc);
+                    
+                    
+                    
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

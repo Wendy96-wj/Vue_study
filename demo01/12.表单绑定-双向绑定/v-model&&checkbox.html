@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-model的基本使用</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- checkbox多选框 -->
+        <h2>请选择您的爱好：</h2>
+        <label for="read">
+            <input type="checkbox" id='read' name="hobby" value="读书" v-model='hobby'>读书
+        </label>
+        <label for="sing">
+            <input type="checkbox" id='sing' name="hobby" value="唱歌" v-model='hobby'>唱歌
+        </label>
+        <label for="watchTV">
+            <input type="checkbox" id='watchTV' name="hobby" value="看剧" v-model='hobby'>看剧
+        </label>
+        <label for="run">
+            <input type="checkbox" id='run' name="hobby" value="跑步" v-model='hobby'>跑步
+        </label>
+        <label for="sleep">
+            <input type="checkbox" id='sleep' name="hobby" value="睡觉" v-model='hobby'>睡觉
+        </label>
+
+        <h2>你选择的爱好:{{hobby}}</h2>
+
+        <!-- checkbox单选框 -->
+        <h2>是否同意协议:</h2>
+        <label for="agree">
+            <input type="checkbox" id='agree' v-model='isAgree'>同意
+        </label>
+        <h2>
+            <button :disabled="!isAgree">下一步</button>
+        </h2>
+
+        <!-- 值绑定(动态的) -->
+        <label v-for="item in origin" :for="item">
+            <input type="checkbox"  :value="item" :id="item" v-model="sport">{{item}}
+        </label>
+        <h2>您参加的球类运动是：{{sport}}</h2>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊',
+                hobby: [], // 多选框对应的数组类型
+                isAgree: false,  // 单选框对应的Boolean值
+                origin:['篮球','足球','乒乓球','羽毛球','网球'],
+                sport:[]
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

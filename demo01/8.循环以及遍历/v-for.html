@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>v-for</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <!-- 遍历数组 -->
+            <!-- 1.在遍历的过程中，没有使用索引值（下标值） -->
+            <ul>
+                <li v-for="item in movies">{{item}}</li>
+            </ul>
+
+            <!-- 2.在遍历的过程中，获取索引值 -->
+            <ul>
+                <li v-for="(item, index) in movies">{{index+1}}.{{item}}</li>
+            </ul>
+
+            <!-- 遍历对象 -->
+            <!-- 1.在遍历对象的过程中，如果只是获取一个值，那么获取的是value -->
+            <ul>
+                <li v-for="item in info">{{item}}</li>
+            </ul>
+
+            <!-- 2.获取key和value  格式（value，key） -->
+            <ul>
+                <li v-for="(value,key) in info">{{value}}--{{key}}</li>
+            </ul>
+
+            <!-- 3.获取key和value和index   -->
+            <ul>
+                <li v-for="(value,key,index) in info">{{value}}--{{key}}--{{index}}</li>
+            </ul>
+
+            <ul>
+                <li v-for="(value,key,index) in info">{{index+1}}. {{key}} : {{value}}</li>
+            </ul>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    message:'你好啊',
+                    movies:["少年的你","哪吒","中国机长","我和我的祖国"],
+                    info:{
+                        name: 'Wendy',
+                        age: 23,
+                        sex: '女',
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>计算属性</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <h2>四部电影的总价格：{{totalPrice}}元</h2>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    message:'你好啊',
+                    movies:[
+                        {id:50, name:"少年的你", price:68},
+                        {id:51, name:"哪吒", price:60},
+                        {id:52, name:"中国机长", price:58},
+                        {id:53, name:"我和我的祖国", price:88}
+                    ]
+                },
+                computed:{
+                    //  filter/map/reduce
+                    totalPrice : function (){
+                        let result = 0;
+                        for (let i=0; i<this.movies.length;i++){
+                            result += this.movies[i].price
+                        }
+                        return result;
+
+
+                        // for (let key in this.movies){ }
+                        // for (let key of this.movies){ }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

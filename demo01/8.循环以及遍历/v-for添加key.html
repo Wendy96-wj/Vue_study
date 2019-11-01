@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>v-for绑定和未绑定key的区别</title>
+    </head>
+    <body>
+        <!-- 
+            splice(第几个元素，需要删除的元素位置，需要插入的元素内容) 
+            splice（2,2） 表示：从第二位置开始删除两个元素
+            splice（2,0，'wendy'）  表示从第二个元素开始插入元素‘wendy’，写0表示不删除元素
+        -->
+        <div id="app">
+            <ul>
+                <li v-for="item in letters" :key="item">{{item}}</li>
+            </ul>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    letters:['A','B','C','D'],
+                }
+            })
+        </script>
+    </body>
+</html>

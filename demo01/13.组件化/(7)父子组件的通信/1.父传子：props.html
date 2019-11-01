@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>父组件与子组件的通信</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <!-- 3.使用组件 -->
+        <!-- <cpnc1></cpnc1> -->
+        <cpn v-bind:cmovies='movies' :cmessage='message'></cpn>
+    </div>
+
+    <template id="cpnC1">
+        <div>
+            <h2>{{cmessage}}</h2>
+            <ul>
+                <li v-for="item in cmovies">{{item}}</li>
+            </ul>
+        </div>
+    </template>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+
+        // 父传子：props
+        const cpn = {
+            template:'#cpnC1',
+            // props:['cmovies','cmessage'],
+            props:{
+                // 1.类型的限制
+                cmovies:Array,
+                cmessage:String,
+
+                // 2.提供一些默认值
+                // cmessage:{
+                //     type:String,   
+                //     default:'哈哈哈哈哈',
+                //     required:true,   // 加上required表示必须传此数据
+                // },
+                // cmovies:{
+                //     type:Array,
+                //     default () {
+                //         return []
+                //     }
+                // }
+            },
+            data () {
+                return {
+
+                }
+            },
+            methods:{
+
+            }
+        }
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '好电影精选',
+                movies:["少年的你","哪吒","中国机长","我和我的祖国"]
+            },
+            components: {
+                cpn
+            }
+        })
+    </script>
+</body>
+
+</html>

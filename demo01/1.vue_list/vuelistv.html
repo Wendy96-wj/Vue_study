@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>学习vue之列表</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <ul>
+                <li v-for="item in movies">{{item}}</li>
+            </ul>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    message:'你好啊',
+                    movies:["少年的你","哪吒","中国机长","我和我的祖国"]
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>父组件与子组件的通信</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <cpn :cinfo='info' :child-my-message="message"></cpn>
+    </div>
+
+    <template id="cpnC1">
+        <div>
+            <h2>{{childMyMessage}}</h2>
+            <ul>
+                <li v-for="(item,value) in cinfo">{{value}} : {{item}}</li>
+            </ul>
+        </div>
+    </template>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+
+        const cpn = {
+            template: '#cpnC1',
+            props: {
+                // 此时学习的vue里组件传值不可以使用驼峰标识
+                cinfo: {
+                    type: Object,
+                    default() {
+                        return {}
+                    },
+                },
+                // 使用驼峰标识，要在调用此数据改为child-my-message，把大写的地方用‘-’连接
+                childMyMessage: {
+                    type:String,
+                    default:''
+                }
+            }
+
+        }
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '个人信息',
+                info: {
+                    name: 'Wendy',
+                    age: 23,
+                    sex: '女'
+                }
+            },
+            components: {
+                cpn
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>字面量增强写法</title>
+</head>
+
+<body>
+    <script>
+        //    普通写法
+        const obj = {
+            name: 'Wendy',
+            age: 23,
+            run: function () {
+                console.log("生日快乐！");
+            },
+            eat: function () {
+                console.log("吃生日蛋糕！");
+            }
+        }
+
+        // 1.属性的增强写法
+        const name = 'Wendy';
+        const age = 23;
+        const sex = "女";
+
+        // ES5的写法
+        const obj = {
+            name: name,
+            age: age,
+            sex: sex,
+        }
+
+        // ES6的写法
+        const obj = {
+            name,
+            age,
+            sex
+        }
+        console.log(obj);
+
+        // 2.函数的增强写法
+
+        // es5的写法
+        const obj = {
+            run: function () {
+
+            },
+            eat: function () {
+
+            }
+        }
+
+        // ES6的写法
+        const obj = {
+            run() {
+
+            },
+            eat() {
+
+            }
+        }
+
+        // angular -> google
+        // TypeScript (micrsoft) -> ts (类型检测)
+        // flow(facebook)
+
+
+
+    </script>
+</body>
+
+</html>

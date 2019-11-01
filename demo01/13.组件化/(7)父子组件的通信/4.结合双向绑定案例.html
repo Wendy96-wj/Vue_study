@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>父组件与子组件的通信</title>
+</head>
+
+<body>
+
+    <!-- 父组件模板 -->
+    <div id="app">
+        <cpn :number1="num1" :number2="num2"
+            @num1change = 'num1Change' @num2change = "num2Change"></cpn>
+        <!-- <cpn :number2="num2"></cpn> -->
+    </div>
+
+    <!-- 子组件模板 -->
+    <template id="cpnC1">
+        <div>
+           <h2>props:{{number1}}</h2>
+           <h2>data:{{datanumber1}}</h2>
+           <!-- <input type="text" v-model="datanumber1"> -->
+           <input type="text" :value="datanumber1" @input="number1Input">
+           <h2>props:{{number2}}</h2>
+           <h2>data:{{datanumber2}}</h2>
+           <!-- <input type="text" v-model="datanumber2"> -->
+           <input type="text" :value="datanumber2" @input="number2Input">
+        </div>
+    </template>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+        // 1.子组件
+        const cpn = {
+            template: '#cpnC1',
+            props:{
+                number1:Number,
+                number2:Number
+            },
+            // 双向绑定数据一定要放在data里
+            data (){
+                return {
+                    datanumber1:this.number1,
+                    datanumber2:this.number2
+
+                }
+            },
+            methods:{
+                number1Input(e){
+                    // 1.将input中的value赋值到datanumber中
+                    this.datanumber1 = e.target.value;
+
+                    // 2.为了让父组件可以修改值，发出一个事件
+                    this.$emit('num1change',this.datanumber1)
+
+                    // 3.同时修饰datanumber2的值
+                    this.datanumber2 = this.datanumber1 * 100
+                    this.$emit('num2change',this.datanumber2)
+                },
+                number2Input(e){
+                    this.datanumber2 = e.target.value;
+                    this.$emit('num2change',this.datanumber2)
+                }
+            }
+
+        }
+
+        // 2.父组件
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Wendy!',
+                num1:0,
+                num2:1
+            },
+            components: {
+                cpn
+            },
+            methods:{
+                num1Change(value){
+                    this.num1 = parseInt(value);
+                },
+                num2Change(value){
+                    this.num2 = parseFloat(value);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

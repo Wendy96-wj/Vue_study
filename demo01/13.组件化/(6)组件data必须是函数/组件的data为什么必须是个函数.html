@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件data必须是函数</title>
+</head>
+
+<body>
+
+    <!-- 组件实例 -->
+    <div id="app">
+        <mycpn1></mycpn1>
+        <mycpn1></mycpn1>
+        <mycpn1></mycpn1>
+    </div>
+
+    <template id="cpn1">
+        <div>
+            <h2>当前计数：{{counter}}</h2>
+            <button @click="add">+</button>
+            <button @click="sub">-</button>
+
+            <!-- <input type="text" value="inputtext">
+
+            <input type="text" value="inputtext2"> -->
+        </div>
+    </template>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+
+        // const obj = {
+        //     inputtext:"哈哈哈哈"
+        // }
+
+        // 组件对象中也有个data属性，data属性必须是个函数，必须返回一个对象，对象内部保存着数据
+        // 也有个methods方法
+        Vue.component("mycpn1", {
+            template: '#cpn1',
+            data() {
+                // 函数每次返回都占用一个空间,彼此不相互影响
+                return {
+                    counter: 0,
+                    inputtext2:'啦啦啦啦'
+                }
+
+               
+            },
+            methods: {
+                add: function () {
+                    this.counter++;
+                    console.log("add被执行！")
+                },
+                sub: function () {
+                    this.counter--;
+                    console.log("sub被执行！")
+                },
+            }
+        })
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊',
+                movies: ["少年的你", "哪吒", "中国机长", "我和我的祖国"]
+            }
+        })
+    </script>
+</body>
+
+</html>

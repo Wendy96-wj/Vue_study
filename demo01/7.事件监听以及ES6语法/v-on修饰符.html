@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>v-on的修饰符</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <!-- .stop 阻止事件冒泡 -->
+            <!-- 1. ‘.stop’修饰符的使用   调用event.stopPropagation()-->
+            <div @click='divClick'>aaaa
+                <button  @click.stop='btnClick'>按钮</button>
+            </div>
+
+            <!-- 2. ‘.prevent’修饰符的使用  调用event.preventDefault() -->
+            <form action="baidu">
+                <input type="submit" value="提交" @click.prevent = "submitClick">
+            </form>
+
+            <!-- 3. '.{keyCode | keyAlias} - 只当事件是从特定键触发时才触发回调' -->
+            <!-- 监听某个键盘的键帽的点击 -->
+            <input type="text" @keyup.enter = "keyUpClick">
+
+            <!-- 4. ‘.native’修饰符的使用  监听组件根元素的原生事件-->
+
+            <!-- 5. ‘.once’修饰符的使用   只触发一次回调-->
+            <button @click.once="btn2Click">按钮</button>
+        </div>
+
+        <script src="../js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el:'#app',
+                data:{
+                   counter:0,
+                },
+                methods:{
+                    divClick() {
+                        console.log('divClick');
+                        
+                    },
+                    btnClick() {
+                        console.log('btnClick');
+                        
+                    },
+                    submitClick() {
+                        console.log('submitClick');
+                        
+                    },
+                    keyUpClick() {
+                        console.log('keyUpClick');
+                        
+                    },
+                    btn2Click() {
+                        console.log('btn2Click');
+                        
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
