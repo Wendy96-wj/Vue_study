@@ -1,0 +1,228 @@
+# 一、什么是Vue-CLi ？
+
+## 1.Vue-CLi的安装
+
+全局安装：npm install -g @vue/cli   （脚手架3）
+
+```bash
+npm install -g @vue/cli
+```
+
+还想用脚手架2  可拉取2.x模板：
+
+```bash
+npm install -g @vue/cli-init
+```
+
+Vue CLi2初始化项目：
+
+```bash
+# `vue init` 的运行效果将会跟 `vue-cli@2.x` 相同
+vue init webpack my-project
+```
+
+Vue CLi3 初始化项目：
+
+```bash
+vue create hello-world
+```
+
+## 2.Vue-CLi 2的项目以及学习
+
+### 2.1 vue cli2初始化项目
+
+ESlint-> lint 限制，ESlint是对js限制，代码必须规范，否则编译器就会提示报错。
+
+unit test 单元测试
+
+e2e test->end to end 端到端测试  安装Nightwatch,是一个利用seleium或webdriver或phantomis等进行自动化测试的框架
+
+![image-20191105095745433](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105095745433.png)
+
+### 2.2 vue cli2的目录结构解析
+
+#### (1) package.json
+
+![image-20191105111849125](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105111849125.png)
+
+"dev":npm run dev 会启动本地服务
+
+"build":npm run build(打包项目)    
+
+build 和 config文件是一些配置相关的东西
+
+#### (2)src文件
+
+存放代码文件的地方
+
+#### (3)static文件
+
+存放静待资源文件，打包的时候会原封不动的存放在dist文件里
+
+## 3.安装CLI错误和ESLint规范
+
+关闭ESLint：在config文件里的index.js->useEslint: true,->false
+
+## 4.runtime-complier 和 runtime-only的区别
+
+### 4.1 runtime-complier
+
+![image-20191105145158271](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105145158271.png)
+
+执行过程：template -> ast -> render -> vdom -> ui
+
+![image-20191105150855758](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105150855758.png)
+
+![image-20191105151439079](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105151439079.png)
+
+### 4.2 runtime-only
+
+![image-20191105145402128](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105145402128.png)
+
+执行过程：render -> vdom ->ui
+
+那么，vue文件中的template是由谁处理的呢？
+
+答：是由vue-template-complier 处理的 
+
+### 4.3 总结
+
+runtime-only 性能更高，代码量更少；
+
+## 5.Vue-CLi 3创建项目和目录结构
+
+### 5.1  vue-cli 3 与 2 版本有很大区别
+
+(1)vue-cli 3 是基于 webpack 4 打造，vue-cli 2 还是 webpack 3
+
+(2)vue-cli 3 的设计原则是“0”配置，移除的配置文件根目录下的，build和config等目录
+
+(3)vue-cli 3 提供了vue ui 命令，提供了可视化配置，更加人性化
+
+(4)移除了static文件夹，新增了public文件夹，并且index.html移动到public中
+
+### 5.2 初始化项目过程
+
+![image-20191105153953156](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105153953156.png)
+
+按“空格“选择自己想要的配置
+
+![image-20191105154632981](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105154632981.png)
+
+### 5.3 运行vue-cli3
+
+npm run serve
+
+![image-20191105155754862](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105155754862.png)
+
+### 5.4  配置文件的查看和修改
+
+(1)命令：vue ui 进入项目管理
+
+![image-20191105161904306](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105161904306.png)
+
+(2) 查看配置文件
+
+![image-20191105163323686](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105163323686.png)
+
+node_modules -> @vue -> cli-service -> lib里的文件中查看
+
+(3) 修改配置文件
+
+在自己当前目录文件下创建一个vue.config.js文件，把需要修改的配置写在里面
+
+## 6.箭头函数的使用和this指向
+
+### 6.1 箭头函数的基本使用
+
+箭头函数：也是一种定义函数的方式
+
+(1) 定义函数的方式 ：function
+
+(2) 对象字面量中定义函数
+
+(3)ES6中的箭头函数
+
+->无参数的
+
+eg: const wendy = ()=>{  }
+
+->有参数的
+
+放入两个参数
+
+eg: const num  = (num1, num2)=>{
+
+​	return num1+ num2;
+
+}
+
+放入一个参数   参数的括号可以省略
+
+eg:const power =  num  => {
+
+​	return  num + num
+
+}
+
+->函数的返回值
+
+返回多行代码
+
+const test = () => {
+
+​	console.log('hahahah');
+
+​	console.log('lalalalala');
+
+}
+
+返回一行代码  (return 可以省略)
+
+const mul = (num1 , num2) => num1 * num2
+
+### 6.2 箭头函数中this的使用
+
+问：什么时候使用箭头函数？
+
+答：大箭头函数中的this引用的就是最近作用域中的this
+
+问：箭头函数中的this是如何查找的呢？
+
+答：向外层作用域中，一层层查找this，直到有this的定义。
+
+# 二、Vue-Router
+
+## 1.什么是路由？
+
+Vue Router 是 [Vue.js](http://cn.vuejs.org/) 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
+
+- 嵌套的路由/视图表
+- 模块化的、基于组件的路由配置
+- 路由参数、查询、通配符
+- 基于 Vue.js 过渡系统的视图过渡效果
+- 细粒度的导航控制
+- 带有自动激活的 CSS class 的链接
+- HTML5 历史模式或 hash 模式，在 IE9 中自动降级
+- 自定义的滚动条行为
+
+## 2.前后端渲染和前后端路由
+
+
+
+# 三、VueX
+
+# 四、网络请求的封装（axios）
+
+
+
+
+
+
+
+
+
+
+
+
+

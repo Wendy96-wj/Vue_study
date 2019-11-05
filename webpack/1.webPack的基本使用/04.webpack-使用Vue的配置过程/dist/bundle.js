@@ -677,10 +677,14 @@ var _vue = __webpack_require__(6);
 
 var _vue2 = _interopRequireDefault(_vue);
 
+var _App = __webpack_require__(9);
+
+var _App2 = _interopRequireDefault(_App);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // 1.使用common.js的模块化规范
-var _require = __webpack_require__(9),
+var _require = __webpack_require__(10),
     add = _require.add,
     mul = _require.mul;
 
@@ -695,23 +699,53 @@ console.log(_info.height);
 
 // 3.依赖css文件
 // 安装loader的依赖 npm install --save-dev css-loader
-__webpack_require__(10);
+__webpack_require__(11);
 
 // 4.依赖less文件
 // npm install --save-dev less-loader less
-__webpack_require__(14);
+__webpack_require__(15);
 document.writeln('<h2>你好啊，webpack！</h2>');
 
 // 5.使用Vue进行开发
 // npm install vue --save  配置Vue
 
+// import App from './vue/app.js'
 
+// 安装npm install vue-loader vue-template-compiler --save-dev
+// 可能发生的错误：
+/**
+ ** ERROR in ./src/Vue/App.vue
+    vue-loader was used without the corresponding plugin. Make sure to include VueLoaderPlugin in your webpack config.
+    @ ./src/main.js 9:11-35
+ **
+ **
+ ** 解决方法：vue-loader 14.0版本以上需要配置一个插件，目前版本15.7.2  改为 13.0.0低版本
+ */
 var app = new _vue2.default({
     el: "#app",
-    data: {
-        message: 'Hello Wendy!'
+    template: '<App/>',
+    components: {
+        App: _App2.default
     }
 });
+
+// const app = new Vue({
+//     el:"#app",
+//     template:`
+//     <div>
+//         <h2>{{message}}</h2>
+//         <button @click="btnClick">按钮</button>
+//         <h2>{{name}}</h2>
+//     </div>`,
+//     data:{
+//         message:'Hello Wendy!'
+//     },
+//     methods:{
+//         btnClick(){
+
+//         }
+//     }
+// })
 
 /***/ }),
 /* 5 */
@@ -12978,6 +13012,30 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    template: '\n    <div>\n        <h2>{{message}}</h2>\n        <button @click="btnClick">\u6309\u94AE</button>\n        <h2>{{name}}</h2>\n    </div>',
+    data: function data() {
+        return {
+            message: 'Hello Wendy!',
+            name: 'Wendy'
+        };
+    },
+
+    methods: {
+        btnClick: function btnClick() {}
+    }
+};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -12992,10 +13050,10 @@ module.exports = {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(11);
+var content = __webpack_require__(12);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -13014,19 +13072,19 @@ if (content.locals) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
 // Imports
-var getUrl = __webpack_require__(12);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(13));
+var getUrl = __webpack_require__(13);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(14));
 // Module
 exports.push([module.i, "body{\r\n    /* background-color: brown; */\r\n    background: url(" + ___CSS_LOADER_URL___0___ + ");\r\n}\r\n\r\n/* 安装URL-loader ： npm install --save-dev url-loader */", ""]);
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13056,16 +13114,16 @@ module.exports = function (url, needQuotes) {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/qxshu.7a7decd1.jpg";
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(15);
+var content = __webpack_require__(16);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -13084,7 +13142,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);

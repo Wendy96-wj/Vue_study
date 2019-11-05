@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <h2>{{message}}</h2>
+        </div>
+
+        <!-- 
+            在终端进入到文件夹
+            然后输入 webpack ./src/main.js  ./dist/bundle.js
+            bundle.js就是打包的文件
+         -->
+        <script src="./dist/bundle.js"></script>
+    <script type="text/javascript" src="dist/bundle.js"></script></body>
+</html>
+
+<!-- 
+    1.runtime-only：代码中，不可以有任何的template
+    2.runtime-compler:代码中，可以有template，因为有compler可以用于编译template
+ -->
