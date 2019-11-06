@@ -208,6 +208,196 @@ Vue Router 是 [Vue.js](http://cn.vuejs.org/) 官方的路由管理器。它和 
 
 ## 2.前后端渲染和前后端路由
 
+### 2.1 后端路由渲染
+
+jsp:java server page
+
+后端路由：后端处理URL和页面之间的映射关系
+
+### 2.2 前后端分离
+
+(1)后端只负责提供数据，不负责任何阶段的内容
+
+(2)前端渲染：浏览器中显示的网页中的大部分内容，都是由前端写的js代码在浏览器中执行，最终渲染出来的网页。
+
+(3)SPA页面：
+
+SPA:单页面富应用
+
+整个网页只有一个html页面
+
+### 2.3 url的hash 和 HTML5的history
+
+location.hash = 'aaa'
+
+![image-20191106104946109](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106104946109.png)
+
+history.pushState({},'','home')   入栈
+
+history.back() 出栈 = history.go(-1)
+
+history.forward()  = history.go(1)
+
+history.go(-2)   history.go(2)
+
+history.replaceState({},'','home')   替换页面 不可返回
+
+## 3.vue-router 安装和配置方式
+
+### 3.1  安装vue-router
+
+npm install vue-router --save
+
+### 3.2 配置方式
+
+在src中router文件中新建index.js文件，一般都会配置好
+
+![image-20191106111409777](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106111409777.png)
+
+![image-20191106111446448](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106111446448.png)
+
+### 3.3 路由和组件的映射关系
+
+![image-20191106140918370](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106140918370.png)
+
+![image-20191106140802376](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106140802376.png)
+
+![image-20191106134835326](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106134835326.png)
+
+### 3.4 router-link的其他属性标签
+
+（1）tag属性：可以指定为渲染成什么组件
+
+![image-20191106141231542](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106141231542.png)
+
+![image-20191106141244183](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106141244183.png)
+
+（2）replace  路由将不可返回  被替代的意思
+
+![image-20191106141539766](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106141539766.png)
+
+（3）router-link-active 
+
+![image-20191106142319782](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106142319782.png)
+
+![image-20191106142344710](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106142344710.png)
+
+## 4. 通过代码跳转路由
+
+![image-20191106143629526](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106143629526.png)
+
+### 4.1  动态路由
+
+![image-20191106150218753](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106150218753.png)
+
+![image-20191106150253798](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106150253798.png)
+
+![image-20191106150429686](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106150429686.png)
+
+## 5. 路由的懒加载
+
+### 5.1 打包解析
+
+打包：npm run build
+
+解析：build/webpack.prod.conf.js ->UglifyJsPlugin插件 注释了 重新打包
+
+### 5.2 路由的懒加载
+
+（1）路由懒加载：主要作用就是将路由对应的组件打包成一个个的js代码，只有在这个路由被访问到的时候，才加载对应的组件
+
+（2）懒加载的方式
+
+![image-20191106155007878](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106155007878.png)
+
+![image-20191106155320706](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106155320706.png)
+
+## 6. 路由的嵌套
+
+### 6.1 两个步骤
+
+（1）创建对应的子组件，并且在路由映射中配置对应的子路由；
+
+（2）在组件内部使用<router-view>标签。
+
+### 6.2 代码的实现
+
+(1) 先在src文件中components文件下创建子路由文件HomeNews.vue和HomeMessage.vue;
+
+![image-20191106161400122](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106161400122.png)
+
+(2)在src文件中router文件下index.js配置路由映射关系
+
+![image-20191106161831693](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106161831693.png)
+
+（3）在Home.vue中实现路由
+
+![image-20191106161935994](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106161935994.png)
+
+## 7.vue-router的参数传递
+
+### 7.1 传递参数的方式
+
+传递参数主要有两种类型：params和query
+
+（1）params的类型
+
+配置的路由格式：**/router/:id**
+
+传递的方式：**在path后面跟上对应的值**
+
+传递后形成的路径：**/router/123, /router/abc**
+
+(2) query 的类型
+
+配置的路由格式：**/router**，也就是普通配置
+
+传递的方式：对象中使用**query的key作为传递方式**
+
+传递后形成的路径：**/router？id=123, /router?id=abc**
+
+### 7.2  代码实现 
+
+（1）在组件中直接传参
+
+![image-20191106165450094](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106165450094.png)
+
+![image-20191106165426457](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106165426457.png)
+
+![image-20191106171027489](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106171027489.png)
+
+![image-20191106171059976](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106171059976.png)
+
+（2）运用代码传参
+
+![image-20191106171904383](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106171904383.png)
+
+## 8. router  和 route的由来
+
+### 8.1 关于router
+
+![image-20191106173251801](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106173251801.png)
+
+![image-20191106173435336](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106173435336.png)
+
+### 8.2 关于route
+
+![image-20191106173701213](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106173701213.png)
+
+就是当前活跃的路由
+
+结论：所有的组件都继承着Vue的原型 （可以看router的源码）
+
+
+
+
+
+
+
+
+
+
+
 
 
 # 三、VueX
