@@ -40,19 +40,32 @@ const routes = [
                 path: 'message',
                 component: HomeMessage
             }
-        ]
+        ],
+        meta:{
+            title:'首页'
+        }
     },
     {
         path: '/about',
-        component: About
+        component: About,
+        meta:{
+            title:'关于'
+        }
     },
     {
         path: '/user/:userId',
-        component: User
+        component: User,
+        meta:{
+            title:'用户'
+        }
     },
     {
         path: '/profile',
-        component: Profile
+        component: Profile,
+        // meta 元数据   表示描述元素的数据
+        meta:{
+            title:'档案'
+        }
     }
 ]
 
@@ -62,6 +75,26 @@ const router = new VueRouter({
     mode: 'history',
     linkActiveClass: 'active'
 })
+
+// 前置守卫（guard）
+router.beforeEach((to,from,next) =>{
+    //  从from 跳转到 to
+    document.title = to.matched[0].meta.title;
+    next() // 必须调用
+    // console.log('beforeEach');
+    
+})
+
+// 后置钩子（hook）
+router.afterEach((to,from)=>{
+    // console.log('afterEach');
+    
+})
+
+// 先调（跳转时）beforeEach后调（跳转后）afterEach
+// 属于全局守卫
+
+
 
 
 

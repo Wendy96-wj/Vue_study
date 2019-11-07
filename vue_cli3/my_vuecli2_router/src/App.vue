@@ -14,7 +14,9 @@
 
     <button @click="userClick">用户</button>
     <button @click="proflieClick">档案</button>
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
+
+    <keep-alive exclude="Profile"><router-view/></keep-alive>
     
   </div>
 </template>
@@ -54,7 +56,8 @@ export default {
         } 
       })
     }
-  }
+  },
+  
 }
 </script>
 
