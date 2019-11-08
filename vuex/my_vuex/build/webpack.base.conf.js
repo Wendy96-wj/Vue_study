@@ -24,12 +24,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    // 别名
     alias: {
       '@': resolve('src'),
-      'assets': resolve('src/assets'),
-      'components': resolve('src/components'),
-      'views': resolve('src/views'),
     }
   },
   module: {

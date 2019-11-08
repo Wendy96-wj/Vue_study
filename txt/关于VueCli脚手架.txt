@@ -491,11 +491,57 @@ router-view也是一个组件，如果直接被包在keep-alive里面，所有�
 
 ![image-20191107154143743](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107154143743.png)
 
+## 2. 实现方法
+
+见项目文件:my_tabbar
+
+# 四、关于 Promise （ES6）
+
+## 1. promise的基本使用
+
+promise是异步编程的一种解决方案。
+
+![image-20191108135442589](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108135442589.png)
+
+问：什么情况下会用到promise？
+
+答：一般情况下是有异步操作时，使用Promise对异步操作进行封装
+
+![image-20191108142854818](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108142854818.png)
+
+## 2. promise 的三种状态
+
+![image-20191108143107630](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108143107630.png)
+
+另一种写法：只写一个then，写两个函数分别调用
+
+![image-20191108144358679](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108144358679.png)
+
+## 3. promise 的链式调用
+
+![image-20191108150626656](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108150626656.png)
+
+## 4. promise的all方法使用
+
+![image-20191108152215693](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108152215693.png)
+
+![image-20191108152227041](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108152227041.png)
+
+# 五、VueX
+
+## 1.什么是vuex？
+
+官网：https://vuex.vuejs.org/zh/
+
+![image-20191108162619351](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108162619351.png)
+
+## 2. 单界面到多界面状态管理切换
+
+![image-20191108172407310](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108172407310.png)
 
 
-# 四、VueX
 
-# 五、网络请求的封装（axios）
+# 六、网络请求的封装（axios）
 
 
 

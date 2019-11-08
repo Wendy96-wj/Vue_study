@@ -1,9 +1,45 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
+// 路由的懒加载方式
+const Home = () => import('../views/home/Home')
+const Category = () => import('../views/category/Category')
+const Shopcar = () => import('../views/shopcar/Shopcar')
+const Profile = () => import('../views/profile/Profile')
 
-Vue.use(Router)
+// 1.安装插件
+Vue.use(VueRouter)
 
-export default new Router({
-  
+// 2. 创建路由对象
+
+const routes = [
+    {
+        path:'',
+        redirect:'/home',
+    },
+    {
+        path:'/home',
+        component: Home,
+    },
+    {
+        path:'/category',
+        component: Category,
+    },
+    {
+        path:'/shopcar',
+        component: Shopcar,
+    },
+    {
+        path:'/profile',
+        component: Profile,
+    },
+];
+
+const router = new VueRouter({
+    routes,
+    mode:'history'
 })
+
+// 3.导出router
+export default router

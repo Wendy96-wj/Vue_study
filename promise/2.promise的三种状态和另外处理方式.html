@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // 成功的时候调用reslove
+                // resolve("Hello Wendy")
+
+                // 失败的时候调用reject
+                reject('erroe msg')
+
+
+            }, 1000)
+        }).then((data) => {
+            console.log(data);
+        },err =>{
+            console.log(err);
+        })
+
+        
+    </script>
+</body>
+
+</html>
