@@ -37,13 +37,13 @@ unit test 单元测试
 
 e2e test->end to end 端到端测试  安装Nightwatch,是一个利用seleium或webdriver或phantomis等进行自动化测试的框架
 
-![image-20191105095745433](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105095745433.png)
+![image-20191105095745433](D:\Wendy\vue_workspace\study-work\txt\img\vue-cli2.png)
 
 ### 2.2 vue cli2的目录结构解析
 
 #### (1) package.json
 
-![image-20191105111849125](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105111849125.png)
+![image-20191105111849125](D:\Wendy\vue_workspace\study-work\txt\img\package.png)
 
 "dev":npm run dev 会启动本地服务
 
@@ -67,17 +67,17 @@ build 和 config文件是一些配置相关的东西
 
 ### 4.1 runtime-complier
 
-![image-20191105145158271](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105145158271.png)
+![image-20191105145158271](D:\Wendy\vue_workspace\study-work\txt\img\runtime-complier.png)
 
 执行过程：template -> ast -> render -> vdom -> ui
 
-![image-20191105150855758](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105150855758.png)
+![image-20191105150855758](D:\Wendy\vue_workspace\study-work\txt\img\runtime-complier02.png)
 
-![image-20191105151439079](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105151439079.png)
+![image-20191105151439079](D:\Wendy\vue_workspace\study-work\txt\img\runtime-complier03.png)
 
 ### 4.2 runtime-only
 
-![image-20191105145402128](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105145402128.png)
+![image-20191105145402128](D:\Wendy\vue_workspace\study-work\txt\img\runtime-only.png)
 
 执行过程：render -> vdom ->ui
 
@@ -103,27 +103,27 @@ runtime-only 性能更高，代码量更少；
 
 ### 5.2 初始化项目过程
 
-![image-20191105153953156](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105153953156.png)
+![image-20191105153953156](D:\Wendy\vue_workspace\study-work\txt\img\vue-cli3.png)
 
 按“空格“选择自己想要的配置
 
-![image-20191105154632981](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105154632981.png)
+![image-20191105154632981](D:\Wendy\vue_workspace\study-work\txt\img\vue-cli3-1.png)
 
 ### 5.3 运行vue-cli3
 
 npm run serve
 
-![image-20191105155754862](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105155754862.png)
+![image-20191105155754862](D:\Wendy\vue_workspace\study-work\txt\img\vue-cli3-2.png)
 
 ### 5.4  配置文件的查看和修改
 
 (1)命令：vue ui 进入项目管理
 
-![image-20191105161904306](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105161904306.png)
+![image-20191105161904306](D:\Wendy\vue_workspace\study-work\txt\img\vue_ui01.png)
 
 (2) 查看配置文件
 
-![image-20191105163323686](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191105163323686.png)
+![image-20191105163323686](D:\Wendy\vue_workspace\study-work\txt\img\vue_ui02.png)
 
 node_modules -> @vue -> cli-service -> lib里的文件中查看
 
@@ -230,7 +230,7 @@ SPA:单页面富应用
 
 location.hash = 'aaa'
 
-![image-20191106104946109](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106104946109.png)
+![image-20191106104946109](D:\Wendy\vue_workspace\study-work\txt\img\hash.png)
 
 history.pushState({},'','home')   入栈
 
@@ -252,47 +252,47 @@ npm install vue-router --save
 
 在src中router文件中新建index.js文件，一般都会配置好
 
-![image-20191106111409777](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106111409777.png)
+![image-20191106111409777](D:\Wendy\vue_workspace\study-work\txt\img\vue-router01.png)
 
-![image-20191106111446448](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106111446448.png)
+![image-20191106111446448](D:\Wendy\vue_workspace\study-work\txt\img\vue-router02.png)
 
 ### 3.3 路由和组件的映射关系
 
-![image-20191106140918370](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106140918370.png)
+![image-20191106140918370](D:\Wendy\vue_workspace\study-work\txt\img\vue-router03.png)
 
-![image-20191106140802376](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106140802376.png)
+![image-20191106140802376](D:\Wendy\vue_workspace\study-work\txt\img\vue-router04.png)
 
-![image-20191106134835326](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106134835326.png)
+![image-20191106134835326](D:\Wendy\vue_workspace\study-work\txt\img\vue-router05.png)
 
 ### 3.4 router-link的其他属性标签
 
 （1）tag属性：可以指定为渲染成什么组件
 
-![image-20191106141231542](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106141231542.png)
+![image-20191106141231542](D:\Wendy\vue_workspace\study-work\txt\img\vue-link01.png)
 
-![image-20191106141244183](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106141244183.png)
+![image-20191106141244183](D:\Wendy\vue_workspace\study-work\txt\img\vue-link02.png)
 
 （2）replace  路由将不可返回  被替代的意思
 
-![image-20191106141539766](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106141539766.png)
+![image-20191106141539766](D:\Wendy\vue_workspace\study-work\txt\img\vue-link03.png)
 
 （3）router-link-active 
 
-![image-20191106142319782](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106142319782.png)
+![image-20191106142319782](D:\Wendy\vue_workspace\study-work\txt\img\vue-link04.png)
 
-![image-20191106142344710](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106142344710.png)
+![image-20191106142344710](D:\Wendy\vue_workspace\study-work\txt\img\vue-link05.png)
 
 ## 4. 通过代码跳转路由
 
-![image-20191106143629526](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106143629526.png)
+![image-20191106143629526](D:\Wendy\vue_workspace\study-work\txt\img\router01.png)
 
 ### 4.1  动态路由
 
-![image-20191106150218753](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106150218753.png)
+![image-20191106150218753](D:\Wendy\vue_workspace\study-work\txt\img\router02.png)
 
-![image-20191106150253798](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106150253798.png)
+![image-20191106150253798](D:\Wendy\vue_workspace\study-work\txt\img\router03.png)
 
-![image-20191106150429686](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106150429686.png)
+![image-20191106150429686](D:\Wendy\vue_workspace\study-work\txt\img\router04.png)
 
 ## 5. 路由的懒加载
 
@@ -308,9 +308,9 @@ npm install vue-router --save
 
 （2）懒加载的方式
 
-![image-20191106155007878](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106155007878.png)
+![image-20191106155007878](D:\Wendy\vue_workspace\study-work\txt\img\router05.png)
 
-![image-20191106155320706](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106155320706.png)
+![image-20191106155320706](D:\Wendy\vue_workspace\study-work\txt\img\router06.png)
 
 ## 6. 路由的嵌套
 
@@ -324,15 +324,15 @@ npm install vue-router --save
 
 (1) 先在src文件中components文件下创建子路由文件HomeNews.vue和HomeMessage.vue;
 
-![image-20191106161400122](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106161400122.png)
+![image-20191106161400122](D:\Wendy\vue_workspace\study-work\txt\img\router07.png)
 
 (2)在src文件中router文件下index.js配置路由映射关系
 
-![image-20191106161831693](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106161831693.png)
+![image-20191106161831693](D:\Wendy\vue_workspace\study-work\txt\img\router08.png)
 
 （3）在Home.vue中实现路由
 
-![image-20191106161935994](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106161935994.png)
+![image-20191106161935994](D:\Wendy\vue_workspace\study-work\txt\img\router09.png)
 
 ## 7.vue-router的参数传递
 
@@ -360,29 +360,29 @@ npm install vue-router --save
 
 （1）在组件中直接传参
 
-![image-20191106165450094](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106165450094.png)
+![image-20191106165450094](D:\Wendy\vue_workspace\study-work\txt\img\canshu01.png)
 
-![image-20191106165426457](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106165426457.png)
+![image-20191106165426457](D:\Wendy\vue_workspace\study-work\txt\img\canshu02.png)
 
-![image-20191106171027489](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106171027489.png)
+![image-20191106171027489](D:\Wendy\vue_workspace\study-work\txt\img\canshu03.png)
 
-![image-20191106171059976](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106171059976.png)
+![image-20191106171059976](D:\Wendy\vue_workspace\study-work\txt\img\canshu04.png)
 
 （2）运用代码传参
 
-![image-20191106171904383](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106171904383.png)
+![image-20191106171904383](D:\Wendy\vue_workspace\study-work\txt\img\canshu05.png)
 
 ## 8. router  和 route的由来
 
 ### 8.1 关于router
 
-![image-20191106173251801](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106173251801.png)
+![image-20191106173251801](D:\Wendy\vue_workspace\study-work\txt\img\router&&route-from01.png)
 
-![image-20191106173435336](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106173435336.png)
+![image-20191106173435336](D:\Wendy\vue_workspace\study-work\txt\img\router&&route-from02.png)
 
 ### 8.2 关于route
 
-![image-20191106173701213](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191106173701213.png)
+![image-20191106173701213](D:\Wendy\vue_workspace\study-work\txt\img\router&&route-from03.png)
 
 就是当前活跃的路由
 
@@ -394,15 +394,15 @@ npm install vue-router --save
 
 （1）可以在每个模板vue里添加created()函数
 
-![image-20191107092640924](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107092640924.png)
+![image-20191107092640924](D:\Wendy\vue_workspace\study-work\txt\img\navtitle01.png)
 
 来实现网页标题的修改，但是当组件多的时候这种操作就会很麻烦！
 
 （2）可在router文件下index.js路由中
 
-![image-20191107092848817](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107092848817.png)
+![image-20191107092848817](D:\Wendy\vue_workspace\study-work\txt\img\navtitle02.png)
 
-![image-20191107092901053](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107092901053.png)
+![image-20191107092901053](D:\Wendy\vue_workspace\study-work\txt\img\navtitle03.png)
 
 实现全局导航守卫
 
@@ -410,7 +410,7 @@ npm install vue-router --save
 
 **beforeEach** 和 **afterEach** 都属于全局守卫
 
-![image-20191107093703061](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107093703061.png)
+![image-20191107093703061](D:\Wendy\vue_workspace\study-work\txt\img\navtitle04.png)
 
 还有**路由独享的守卫**，**组件内的守卫**
 
@@ -469,11 +469,11 @@ const router = new VueRouter({
 
 keep-alive 是 Vue 内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染。
 
-![image-20191107152442721](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107152442721.png)
+![image-20191107152442721](D:\Wendy\vue_workspace\study-work\txt\img\keep-alive.png)
 
 router-view也是一个组件，如果直接被包在keep-alive里面，所有路径匹配到的视图组件都会被缓存。
 
-![image-20191107152509818](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107152509818.png)
+![image-20191107152509818](D:\Wendy\vue_workspace\study-work\txt\img\keep-alive02.png)
 
 **keep-alive两个非常重要的属性**：
 
@@ -481,7 +481,7 @@ router-view也是一个组件，如果直接被包在keep-alive里面，所有�
 
 **exclude** - 字符串或正则表达，任何匹配的组件都不会被缓存。
 
-![image-20191107152952302](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107152952302.png)
+![image-20191107152952302](D:\Wendy\vue_workspace\study-work\txt\img\keep-alive03.png)
 
 只有Profile组件不会被缓存，exclude=“Profile,User”(多个)
 
@@ -489,7 +489,7 @@ router-view也是一个组件，如果直接被包在keep-alive里面，所有�
 
 ## 1.tabBar-基本结构搭建
 
-![image-20191107154143743](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191107154143743.png)
+![image-20191107154143743](D:\Wendy\vue_workspace\study-work\txt\img\tabBar01.png)
 
 ## 2. 实现方法
 
@@ -501,31 +501,31 @@ router-view也是一个组件，如果直接被包在keep-alive里面，所有�
 
 promise是异步编程的一种解决方案。
 
-![image-20191108135442589](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108135442589.png)
+![image-20191108135442589](D:\Wendy\vue_workspace\study-work\txt\img\promise01.png)
 
 问：什么情况下会用到promise？
 
 答：一般情况下是有异步操作时，使用Promise对异步操作进行封装
 
-![image-20191108142854818](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108142854818.png)
+![image-20191108142854818](D:\Wendy\vue_workspace\study-work\txt\img\promise02.png)
 
 ## 2. promise 的三种状态
 
-![image-20191108143107630](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108143107630.png)
+![image-20191108143107630](D:\Wendy\vue_workspace\study-work\txt\img\promise03.png)
 
 另一种写法：只写一个then，写两个函数分别调用
 
-![image-20191108144358679](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108144358679.png)
+![image-20191108144358679](D:\Wendy\vue_workspace\study-work\txt\img\promise04.png)
 
 ## 3. promise 的链式调用
 
-![image-20191108150626656](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108150626656.png)
+![image-20191108150626656](D:\Wendy\vue_workspace\study-work\txt\img\promise05.png)
 
 ## 4. promise的all方法使用
 
-![image-20191108152215693](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108152215693.png)
+![image-20191108152215693](D:\Wendy\vue_workspace\study-work\txt\img\promise06.png)
 
-![image-20191108152227041](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108152227041.png)
+![image-20191108152227041](D:\Wendy\vue_workspace\study-work\txt\img\promise07.png)
 
 # 五、VueX
 
@@ -533,13 +533,179 @@ promise是异步编程的一种解决方案。
 
 官网：https://vuex.vuejs.org/zh/
 
-![image-20191108162619351](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108162619351.png)
+![image-20191108162619351](D:\Wendy\vue_workspace\study-work\txt\img\vuex01.png)
 
 ## 2. 单界面到多界面状态管理切换
 
-![image-20191108172407310](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20191108172407310.png)
+![image-20191108172407310](D:\Wendy\vue_workspace\study-work\txt\img\vuex02.png)
 
+## 3. vuex的安装
 
+安装命令：npm install vuex --save
+
+![image-20191111102447228](D:\Wendy\vue_workspace\study-work\txt\img\vuex03.png)
+
+![image-20191111102325184](D:\Wendy\vue_workspace\study-work\txt\img\vuex03_1.png)
+
+## 4. 核心概念
+
+### 4.1 state
+
+![image-20191111103627108](D:\Wendy\vue_workspace\study-work\txt\img\vue-pic.png)
+
+同步操作：可直接Vue Components --> Mutations -->State
+
+异步操作：要进过Vue Components -->Actions处理 -->Mutations -->State
+
+State单一状态树： Vuex 使用**单一状态树**——是的，用一个对象就包含了全部的应用层级状态。至此它便作为一个“唯一数据源 ([SSOT](https://en.wikipedia.org/wiki/Single_source_of_truth))”而存在。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。 
+
+### 4.2 mutations
+
+![image-20191111132503931](D:\Wendy\vue_workspace\study-work\txt\img\mutations.png)
+
+![image-20191111132615954](D:\Wendy\vue_workspace\study-work\txt\img\mutations02.png)
+
+ 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 **事件类型 (type)** 和 一个 **回调函数 (handler)**。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数： 
+
+```js
+const store = new Vuex.Store({
+  state: {
+    count: 1
+  },
+  mutations: {
+    increment (state) {
+      // 变更状态
+      state.count++
+    }
+  }
+})
+```
+
+**vuex-mutation的携带参数**： 你可以向 `store.commit` 传入额外的参数，即 mutation 的 **载荷（payload）**
+
+![image-20191111152841031](D:\Wendy\vue_workspace\study-work\txt\img\mutations03.png)
+
+![image-20191111152829034](D:\Wendy\vue_workspace\study-work\txt\img\mutations04.png)
+
+![image-20191111152901461](D:\Wendy\vue_workspace\study-work\txt\img\mutations05.png)
+
+提交风格：
+
+![image-20191111153535073](D:\Wendy\vue_workspace\study-work\txt\img\mutations06.png)
+
+![image-20191111153645840](D:\Wendy\vue_workspace\study-work\txt\img\mutations07.png)
+
+vue.set(state.info,'address','武汉') 添加属性
+
+vue.delete(state.info,'age')   删除属性
+
+**使用常量替代 Mutation 事件类型**
+
+使用常量替代 mutation 事件类型在各种 Flux 实现中是很常见的模式。这样可以使 linter 之类的工具发挥作用，同时把这些常量放在单独的文件中可以让你的代码合作者对整个 app 包含的 mutation 一目了然：
+
+```js
+// mutation-types.js
+export const SOME_MUTATION = 'SOME_MUTATION'
+// store.js
+import Vuex from 'vuex'
+import { SOME_MUTATION } from './mutation-types'
+
+const store = new Vuex.Store({
+  state: { ... },
+  mutations: {
+    // 我们可以使用 ES2015 风格的计算属性命名功能来使用一个常量作为函数名
+    [SOME_MUTATION] (state) {
+      // mutate state
+    }
+  }
+})
+```
+
+用不用常量取决于你——在需要多人协作的大型项目中，这会很有帮助。但如果你不喜欢，你完全可以不这样做。
+
+### 4.3 Getter 
+
+ Vuex 允许我们在 store 中定义“getter”（可以认为是 store 的计算属性）。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。 
+
+![image-20191111145723165](D:\Wendy\vue_workspace\study-work\txt\img\getters01.png)
+
+![image-20191111145824428](D:\Wendy\vue_workspace\study-work\txt\img\getters02.png)
+
+### 4.4 Action
+
+Action 类似于 mutation，不同在于：
+
+- Action 提交的是 mutation，而不是直接变更状态。
+
+- Action 可以包含任意异步操作。
+
+  ![image-20191111162954972](D:\Wendy\vue_workspace\study-work\txt\img\action01.png)
+
+  ![image-20191111163026278](D:\Wendy\vue_workspace\study-work\txt\img\action02.png)
+
+  ### 4.5 Module
+
+  由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。
+
+  为了解决以上问题，Vuex 允许我们将 store 分割成**模块（module）**。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割：
+
+  ```js
+  const moduleA = {
+    state: { ... },
+    mutations: { ... },
+    actions: { ... },
+    getters: { ... }
+  }
+  
+  const moduleB = {
+    state: { ... },
+    mutations: { ... },
+    actions: { ... }
+  }
+  
+  const store = new Vuex.Store({
+    modules: {
+      a: moduleA,
+      b: moduleB
+    }
+  })
+  
+  store.state.a // -> moduleA 的状态
+  store.state.b // -> moduleB 的状态
+  ```
+
+### 4.5 store文件夹的目录结构
+
+补充一点ES6的语法：
+
+![image-20191111171422282](D:\Wendy\vue_workspace\study-work\txt\img\es6.png)
+
+Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的规则：
+
+1. 应用层级的状态应该集中到单个 store 对象中。
+2. 提交 **mutation** 是更改状态的唯一方法，并且这个过程是同步的。
+3. 异步逻辑都应该封装到 **action** 里面。
+
+只要你遵守以上规则，如何组织代码随你便。如果你的 store 文件太大，只需将 action、mutation 和 getter 分割到单独的文件。
+
+对于大型应用，我们会希望把 Vuex 相关代码分割到模块中。下面是项目结构示例：
+
+```bash
+├── index.html
+├── main.js
+├── api
+│   └── ... # 抽取出API请求
+├── components
+│   ├── App.vue
+│   └── ...
+└── store
+    ├── index.js          # 我们组装模块并导出 store 的地方
+    ├── actions.js        # 根级别的 action
+    ├── mutations.js      # 根级别的 mutation
+    └── modules
+        ├── cart.js       # 购物车模块
+        └── products.js   # 产品模块
+```
 
 # 六、网络请求的封装（axios）
 
