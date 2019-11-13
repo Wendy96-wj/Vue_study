@@ -709,15 +709,50 @@ Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的
 
 # 六、网络请求的封装（axios）
 
+![image-20191112084531907](D:\Wendy\vue_workspace\study-work\txt\img\axios_img01.png)
 
+![image-20191112084600597](D:\Wendy\vue_workspace\study-work\txt\img\axios_img02.png)
 
+![image-20191112084648735](D:\Wendy\vue_workspace\study-work\txt\img\axios_img03.png)
 
+## 1. axios框架的基本使用
 
+安装：npm install axios --save
 
+在main.js中导入import axios from 'axios'
 
+需要配置跨域请求：在config/index.js文件中
 
+![image-20191112141920681](D:\Wendy\vue_workspace\study-work\txt\img\axios_img04.png)
 
+关于get请求：
 
+![image-20191112142239046](D:\Wendy\vue_workspace\study-work\txt\img\axios_get.png)
 
+关于post请求：
 
+参数问题： axios中post的请求参数格式是form-data格式 ,所以需要先将数据格式作转换，在当前页面引入第三方库qs 
 
+ import qs from "qs" 
+
+![image-20191112142500189](D:\Wendy\vue_workspace\study-work\txt\img\axios_post.png)
+
+## 2. axios的实例和模块封装
+
+![image-20191113085921272](D:\Wendy\vue_workspace\study-work\txt\img\axios_mokuai.png)
+
+# 七、
+
+在当前项目文件安装：npm i element-ui -S
+
+然后再main.js中去导入
+
+import ElementUI from 'element-ui'
+
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI)
+
+![image-20191113162245151](D:\Wendy\vue_workspace\study-work\txt\img\ui.png)
+
+官网： http://element.eleme.io/#/zh-CN 

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d54b483-903d-4421-9c34-8d3a24fb2972" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../txt/img/es6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../txt/关于VueCli脚手架.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../txt/关于VueCli脚手架.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/fbsel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/indexno.png" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/indexno.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/indexsel.png" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/indexsel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/myno.png" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/myno.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/mysel.png" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/mysel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/scno.png" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/scno.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/scsel.png" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/assets/images/tabbar/scsel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/components/MainTabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/components/MainTabBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/components/tabBar/TabBarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_cli3/my_tabbar/src/components/tabBar/TabBarItem.vue" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="shopping" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="platforms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="platforms" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="myshopping" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d54b483-903d-4421-9c34-8d3a24fb2972" name="Default Changelist" comment="" />
+      <created>1573640391477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573640391477</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Captures" order="0" sideWeight="0.2544843" side_tool="true" weight="0.32995737" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.7455157" visible="true" weight="0.32995737" />
+      <window_info id="Structure" order="2" sideWeight="0.5010846" side_tool="true" weight="0.32995737" />
+      <window_info id="Build Variants" order="3" side_tool="true" weight="0.32995737" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Resources Explorer" order="6" sideWeight="0.49566162" weight="0.32995737" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" sideWeight="0.5010846" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="Logcat" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.38177875" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" />
+      <window_info anchor="right" id="Flutter Outline" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout>
+  </component>
+</project>

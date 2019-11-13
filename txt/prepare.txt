@@ -1,0 +1,46 @@
+# 一、cordova打包vue项目为app
+
+## 1.1 JDK
+
+ 在官网下载安装：https://www.oracle.com/index.html 
+
+ java 和javac 
+
+## 1.2 android SDK
+
+ 具体安装步骤请参考： https://blog.csdn.net/zeternityyt/article/details/79655150 
+
+## 1.3 创建cordova 项目并添加平台
+
+全局安装cordova   npm install -g cordova
+
+打开命令提示符或者终端，输入
+
+**cordova create apptest com.test.app**
+
+其中apptest代表创建的项目名，com.test.app为打包成apk以后的名字。
+
+创建成功后可以看见出现以下目录结构：
+
+ ![img](D:\Wendy\vue_workspace\study-work\txt\img\cordova01.png)
+
+然后进入apptest目录cd apptest
+
+添加平台：
+
+android：cordova platform add android
+
+ios：cordova platform add ios
+
+这里添加的是android，命令运行后出现以下信息则表示添加成功 
+
+![img](D:\Wendy\vue_workspace\study-work\txt\img\cordova02.png) 
+
+请见：https://blog.csdn.net/zeternityyt/article/details/79756944
+
+## 1.5 关于APK的签名
+
+详情：https://www.cnblogs.com/qirui/p/8421372.html
+
+![image-20191113133458831](D:\Wendy\vue_workspace\study-work\txt\img\apc快.png)
+

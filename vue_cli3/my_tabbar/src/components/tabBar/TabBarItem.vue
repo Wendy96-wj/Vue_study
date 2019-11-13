@@ -48,9 +48,10 @@ export default {
 }
 
 .tab-bar-item img {
-  width: 30px;
-  height: 30px;
-  margin-top: 2px;
+  width: 22px;
+  height: 22px;
+  margin-top: 6px;
+  margin-bottom: 3px;
   vertical-align: middle;
 }
 /* .active{

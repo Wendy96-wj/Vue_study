@@ -6,8 +6,8 @@
       <div slot="item.text">首页</div>
     </TabBarItem>
     <TabBarItem path="/category" activeColor="#f60">
-      <img slot="item.icon" src="~assets/images/tabbar/fbsel.png" alt="" />
-      <img slot="item.icon-active" src="~assets/images/tabbar/fbsel.png" alt="" />
+      <img slot="item.icon" src="~assets/images/tabbar/categoryno.png" alt="" />
+      <img slot="item.icon-active" src="~assets/images/tabbar/categorysel.png" alt="" />
       <div slot="item.text">分类</div>
     </TabBarItem>
     <TabBarItem path="/shopcar" activeColor="#f60">
