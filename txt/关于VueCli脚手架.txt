@@ -741,7 +741,7 @@ Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的
 
 ![image-20191113085921272](D:\Wendy\vue_workspace\study-work\txt\img\axios_mokuai.png)
 
-# 七、
+# 七、Element-Ui
 
 在当前项目文件安装：npm i element-ui -S
 

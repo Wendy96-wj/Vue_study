@@ -11,6 +11,8 @@
 
 在cordova项目目录下
 运行  npm install               加载资源包
+添加平台 cordova platform add android
+        cordova platform add ios
 运行  cordova build ios/android         构建项目
 运行  cordova run ios/android           运行项目
 
