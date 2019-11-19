@@ -48,7 +48,6 @@ console.log(new3Nums);
 // return 342 + 108 = 450
 
 
-
 // 1.需求：取出所有小于100的数字
 // let newNums = []
 // for(let n of nums){

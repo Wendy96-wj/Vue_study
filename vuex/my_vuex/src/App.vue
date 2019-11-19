@@ -77,9 +77,11 @@ export default {
       //   }
       // })
 
+      // dispatch : 含有异步操作，例如向后台提交数据
+      //  commit ： 同步操作
+
       this.$store.dispatch('aupdateInfo','我是携带的信息').then(res=>{
-        console.log("里面完成了");
-        
+        console.log("里面完成了");  
         console.log(res);
         
       })
